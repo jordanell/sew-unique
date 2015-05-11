@@ -10,7 +10,7 @@
   }
 
   #hero-content {
-    @include shift(2);
+    @include shift(1);
     @include span-columns(10);
 
     color: white;

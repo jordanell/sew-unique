@@ -1,0 +1,35 @@
+#content {
+  @include outer-container;
+  margin-top: 50px;
+
+  h2 {
+    font-size: 50px;
+    margin: 40px 0;
+    text-align: center;
+    font-weight: 200;
+  }
+
+  .content-area {
+    @include span-columns(4);
+
+    .inner-content {
+      @include shift(1);
+      @include span-columns(10);
+
+      text-align: center;
+    }
+
+    p {
+      font-weight: 200;
+    }
+
+    img {
+      text-align: center;
+      border-radius: 50%;
+      width: 175px;
+      height: 175px;
+      border: #CCCCCC 3px solid;
+      border-radius: 50%;
+    }
+  }
+}
