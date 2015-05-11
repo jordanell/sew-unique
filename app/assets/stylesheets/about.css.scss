@@ -1,0 +1,29 @@
+#about {
+  @include outer-container;
+  margin-top: 170px;
+
+  h2 {
+    font-size: 50px;
+    margin: 70px 0;
+    text-align: center;
+    font-weight: 200;
+  }
+
+  .bio {
+    @include span-columns(6);
+
+    font-weight: 200;
+  }
+
+  .photo {
+    @include span-columns(6);
+
+    text-align: center;
+
+    img {
+      text-align: center;
+      width: 400px;
+      height: 225px;
+    }
+  }
+}
