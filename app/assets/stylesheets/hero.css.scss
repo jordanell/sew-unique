@@ -4,6 +4,9 @@
 
   #inner-hero {
     @include outer-container;
+
+    position: relative;
+    height: 600px;
   }
 
   #hero-content {
@@ -11,6 +14,8 @@
     @include span-columns(10);
 
     color: white;
+    position: relative;
+    top: 20%;
 
     h3 {
       font-size: 50px;
