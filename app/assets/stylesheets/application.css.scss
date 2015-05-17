@@ -17,13 +17,19 @@
 @import 'bourbon';
 @import 'neat';
 
+// Import font awesome stuff
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
 // Import global styles
 @import 'variables';
 @import 'global';
 
 // Import all other styles
 @import 'hero';
+@import 'contact-bar';
 @import 'content';
 @import 'about';
+@import 'contact';
 @import 'heart';
 @import 'footer';

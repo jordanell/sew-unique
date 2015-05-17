@@ -1,0 +1,18 @@
+#contact-bar {
+  padding: 20px 10px;
+  background-color: #E7E7E7;
+  color: #666;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: 20px;
+  }
+}

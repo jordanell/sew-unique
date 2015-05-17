@@ -1,5 +1,12 @@
 <section id="hero">
   <div id="inner-hero">
+    <div id="hero-links">
+    <ul>
+      <li><a href="#content">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    </div>
     <div id="hero-content">
       <h3>Sew Unique</h3>
       <h5>by Bonnie</h5>
@@ -8,11 +15,15 @@
     </div>
   </div>
 </section>
+<section id="contact-bar">
+  <span class="contact">phone: (250)-555-5555</span>
+  <span class="contact">email: bonnie@myemail.com</span>
+</section>
 <section id="content">
   <h2>What We Offer</h2>
   <div class="content-area">
     <div class="inner-content">
-      <%= image_tag("feature-1.jpg", :alt => "rss feed") %>
+      <%= image_tag("feature-1.jpg", :alt => "Feature 1") %>
       <h4>Hems<h4>
       <p>
         Some quick little sentence about hems. What else can we say here?
@@ -21,7 +32,7 @@
   </div>
   <div class="content-area">
     <div class="inner-content">
-      <%= image_tag("feature-1.jpg", :alt => "rss feed") %>
+      <%= image_tag("feature-1.jpg", :alt => "Feature 2") %>
       <h4>Gowns<h4>
       <p>
         Some quick little sentence about hems. What else can we say here?
@@ -30,7 +41,7 @@
   </div>
   <div class="content-area">
     <div class="inner-content">
-      <%= image_tag("feature-1.jpg", :alt => "rss feed") %>
+      <%= image_tag("feature-1.jpg", :alt => "Feature 3") %>
       <h4>Dresses<h4>
       <p>
         Some quick little sentence about hems. What else can we say here?
@@ -39,7 +50,7 @@
   </div>
 </section>
 <section id="about">
-  <h2>About Us</h2>
+  <h2>About Me</h2>
   <div class="bio">
     <p>
       My name Is Bonnie King and I have been sewing for years. Blah blah blah,
@@ -51,7 +62,25 @@
     </p>
   </div>
   <div class="photo">
-    <%= image_tag("feature-1.jpg", :alt => "rss feed") %>
+    <%= image_tag("feature-1.jpg", :alt => "Bonnie King") %>
+  </div>
+</section>
+<section id="contact">
+  <div id="email-form">
+    <div id="inner-form">
+
+    </div>
+  </div>
+  <div id="map">
+    <h4>Where to find us</h4>
+    <p>You can find us at 9999 Campbell River Rd, Campbell River.</p>
+    <%= image_tag("map.png", :alt => "Map to Sew Unique") %>
+    <h4>Get in touch</h4>
+    <p>If you want to get in contact with us, we can be reached at:</p>
+    <ul>
+      <li><i class="fa fa-phone"></i>250 555 5555</li>
+      <li><i class="fa fa-envelope"></i>bonnie@myemail.com</li>
+    </ul>
   </div>
 </section>
 <section id="footer">

@@ -7,6 +7,7 @@
     margin: 70px 0;
     text-align: center;
     font-weight: 200;
+    color: $dark;
   }
 
   .content-area {
@@ -19,8 +20,14 @@
       text-align: center;
     }
 
+    h4 {
+      color: $dark;
+    }
+
     p {
       font-weight: 200;
+      color: $light;
+      line-height: 25px;
     }
 
     img {
@@ -30,6 +37,10 @@
       height: 175px;
       border: #CCCCCC 3px solid;
       border-radius: 50%;
+    }
+
+    @media screen and (max-width: $small) {
+      @include span-columns(12);
     }
   }
 }

@@ -5,5 +5,9 @@
   h1 {
     color: #BBBBBB;
     font-size: 30px;
+
+    @media screen and (max-width: $small) {
+      font-size: 20px;
+    }
   }
 }
