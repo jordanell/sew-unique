@@ -25,7 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bourbon', '4.2.2'
 gem 'neat', '1.7.2'
-
 gem 'font-awesome-sass', '4.3.0'
 
 # Use ActiveModel has_secure_password

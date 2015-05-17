@@ -2,6 +2,14 @@
   @include outer-container;
   margin-top: 170px;
 
+  h2 {
+    font-size: 50px;
+    margin: 70px 0;
+    text-align: center;
+    font-weight: 200;
+    color: $dark;
+  }
+
   #email-form, #map {
     padding: 0 40px;
   }
@@ -12,7 +20,30 @@
     #inner-form {
       border-radius: 5px;
       border: 1px solid #CCC;
-      height: 200px;
+      padding: 20px 40px;
+
+      h4 {
+        color: dark;
+        margin-bottom: 10px;
+      }
+
+      input, textarea {
+        margin-bottom: 10px;
+        border: 1px solid #CCC;
+        border-radius: 3px;
+        font-size: 15px;
+        padding: 8px 12px;
+        color: $light;
+        width: 100%;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      i {
+        margin-right: 10px;
+      }
     }
 
     @media screen and (max-width: $small) {
@@ -21,7 +52,6 @@
   }
 
   #map {
-    @include shift(6);
     @include span-columns(6);
 
     h4 {
@@ -54,7 +84,6 @@
     }
 
     @media screen and (max-width: $small) {
-      @include shift(0);
       @include span-columns(12);
     }
   }
