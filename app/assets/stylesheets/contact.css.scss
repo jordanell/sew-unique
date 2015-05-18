@@ -1,6 +1,6 @@
 #contact {
   @include outer-container;
-  margin-top: 170px;
+  margin-top: 150px;
 
   h2 {
     font-size: 50px;
@@ -86,5 +86,9 @@
     @media screen and (max-width: $small) {
       @include span-columns(12);
     }
+  }
+
+  @media screen and (max-width: $small) {
+    margin-top: 75px;
   }
 }

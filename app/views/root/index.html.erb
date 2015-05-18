@@ -4,6 +4,7 @@
     <ul>
       <li><a id="content-link" href="#">Features</a></li>
       <li><a id="about-link" href="#">About</a></li>
+      <li><a id="gallery-link" href="#">Gallery</a></li>
       <li><a id="contact-link" href="#">Contact</a></li>
     </ul>
     </div>
@@ -11,16 +12,20 @@
       <h3>Sew Unique</h3>
       <h5>by Bonnie</h5>
       <h4>Turning you from ass to class since 1991</h4>
-      <button class="button success">Contact Us</button>
+      <button id="contact-button" class="button success">Contact Us</button>
     </div>
   </div>
 </section>
 <section id="contact-bar">
-  <span class="contact">phone: (250)-555-5555</span>
-  <span class="contact">email: bonnie@myemail.com</span>
+  <span class="contact phone">(250)-555-5555</span>
+  <span class="contact email">bonnie@email.com</span>
 </section>
 <section id="content">
-  <h2>What We Offer</h2>
+  <h2>What we have to offer</h2>
+  <h5>
+    Some short little blurb about all the services that Bonnie
+    has to offer. Maybe this should be two setences.
+  </h5>
   <div class="content-area">
     <div class="inner-content">
       <%= image_tag("feature-1.jpg", :alt => "Feature 1") %>
@@ -50,8 +55,8 @@
   </div>
 </section>
 <section id="about">
-  <h2>About Me</h2>
   <div class="bio">
+  <h2>About Me</h2>
     <p>
       My name Is Bonnie King and I have been sewing for years. Blah blah blah,
       this is why I am great. Blah blah blah, this is why I am great. Blah blah blah,
@@ -66,7 +71,6 @@
   </div>
 </section>
 <section id="contact">
-  <h2>Contact</h2>
   <div id="email-form">
     <div id="inner-form">
       <h4>Name / Last Name</h4>

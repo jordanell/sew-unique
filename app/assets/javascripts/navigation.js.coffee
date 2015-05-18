@@ -1,7 +1,14 @@
+scrollTo = (elementId) ->
+  $('html, body').animate {
+      scrollTop: $("##{elementId}").offset().top
+  }, 1200
+
+
 $(document).ready ->
-  for link in ['content', 'about', 'contact']
+  for link in ['content', 'about', 'gallery', 'contact']
     do (link) ->
       $("##{link}-link").click ->
-        $('html, body').animate {
-            scrollTop: $("##{link}").offset().top
-        }, 1200
+        scrollTo(link)
+
+  $('#contact-button').click ->
+    scrollTo('contact')
