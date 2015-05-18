@@ -6,7 +6,7 @@ class ContactFormMailer < ActionMailer::Base
     @email = params[:email]
     @message = params[:message]
 
-    mail(to: 'bonnie@email.com',
+    mail(to: 'bksewunique@gmail.com',
          subject: "[Website] Contact Message",
          from: 'sewuniquebybonnie@gmail.com')
   end
