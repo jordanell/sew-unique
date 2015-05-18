@@ -11,6 +11,10 @@
       font-weight: 200;
       color: $dark;
       padding: 0 20px;
+
+      @media screen and (max-width: $small) {
+        text-align: center;
+      }
     }
 
     p {
@@ -31,8 +35,7 @@
     text-align: center;
 
     img {
-      float: right;
-      width: 400px;
+      max-width: 400px;
       margin-top: 10px;
       max-height: 200px;
       border-radius: 10px;
