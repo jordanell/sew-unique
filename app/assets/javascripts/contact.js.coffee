@@ -25,7 +25,6 @@ showFlash = ($element, message = null) ->
       $element.slideUp();
     , 7000
 
-
 resetEmailButton = ->
   $emailSend = $('#email-send')
 
