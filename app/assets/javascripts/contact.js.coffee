@@ -6,8 +6,25 @@ emailSuccess = ->
   $('#email-email').val('')
   $('#email-message').val('')
 
-emailFailure = ->
+  showFlash $('#flash-success')
+
+emailFailure = (data) ->
   resetEmailButton()
+  showFlash $('#flash-error'), data.responseJSON.message
+
+showFlash = ($element, message = null) ->
+  # Clear old flashes
+  $('#flash-success, #flash-error').css('display', 'none')
+  $('#flash-error').text('An error occured! Please phone us for further support.')
+
+  if message
+    $element.text(message)
+
+  $element.slideDown ->
+    setTimeout ->
+      $element.slideUp();
+    , 7000
+
 
 resetEmailButton = ->
   $emailSend = $('#email-send')

@@ -25,6 +25,9 @@
 @import 'variables';
 @import 'global';
 
+// Import flash styles.
+@import 'flashes';
+
 // Import all other styles
 @import 'hero';
 @import 'contact-bar';
