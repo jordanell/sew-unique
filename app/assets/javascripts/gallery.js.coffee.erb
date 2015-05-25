@@ -1,0 +1,57 @@
+gallery = {
+  NUM_PHOTOS: 10
+  index: 0
+
+  increase: ->
+    if @index < @NUM_PHOTOS
+      ++@index
+    else
+      @index = 0
+
+  decrease: ->
+    if @index > 0
+      --@index
+    else
+      @index = @NUM_PHOTOS
+}
+
+setGalleryPhoto = (index) ->
+  gallery.index = parseInt(index)
+  image = "gallery-#{index}.jpg"
+
+  # Set the photo
+  $('#lightbox img').attr('src', "<%= asset_path 'gallery-1.jpg' %>")
+
+launchGalleryAt = (index) ->
+  setGalleryPhoto(index)
+
+  # Turn lightbox on
+  $('#lightbox').css('display', 'block')
+
+closeGallery = ->
+  # Turn off the light box
+  $('#lightbox').css('display', 'none')
+
+$(document).ready ->
+  $('.gallery-thumbnail img').click (e) ->
+    index = e.currentTarget.attributes['data-index'].value
+    launchGalleryAt(index);
+
+  $('#lightbox i').click (e) ->
+    e.stopPropagation()
+
+  $('#lightbox .close').click (e) ->
+    closeGallery()
+
+  $('#lightbox .left').click (e) =>
+    setGalleryPhoto(gallery.decrease())
+
+  $('#lightbox .right').click (e) =>
+    setGalleryPhoto(gallery.increase())
+
+  $('#lightbox img').click (e) ->
+    e.stopPropagation()
+
+  $('#lightbox').click (e) ->
+    closeGallery()
+
