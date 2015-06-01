@@ -36,12 +36,16 @@ The `.env` file should look like:
 
 To deploy:
 
-    bundle exec rake devops:deploy
+    bundle exec rake ENVIRONMENT=production BRANCH=master devops:deploy
 
 To administer the server (update packages or apply new ssh keys):
 
-    bundle exec rake devops:admin
+    bundle exec rake ENVIRONMENT=production devops:admin
 
+Notice that the branch to work on can be changed for the deploy task.
+
+In the future if there is a staging server, the environment variable can be
+set accordingly.
 # TODO
 
 ## Content
