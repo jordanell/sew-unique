@@ -17,5 +17,3 @@
 1. Configuration ansible
 2. Update readme
 3. Deploy
-4. Tests
-5. Asset management
