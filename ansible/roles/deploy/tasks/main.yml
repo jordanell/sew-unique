@@ -27,11 +27,11 @@
 - copy: src="unicorn.rb" dest="{{release_dir}}/config/unicorn.rb"
 
 - name: Restart server
-  service: name=sew-unique state=restarted
+  service: name=sew-unique state=restarted enabled=yes
   sudo_user: root
 
 - name: Restart nginx
-  service: name=nginx state=restarted
+  service: name=nginx state=restarted enabled=yes
   sudo_user: root
 
 - name: Count old releases
