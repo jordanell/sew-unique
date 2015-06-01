@@ -1,0 +1,46 @@
+- name: Clone repository
+  git: repo=ssh://git@github.com/jordanell/sew-unique.git dest={{release_dir}} accept_hostkey=yes version={{branch}}
+  register: repo
+
+- name: "Bundle Install"
+  command: "bundle install --jobs=4 --path={{shared_dir}}/bundle --gemfile={{release_dir}}/Gemfile --deployment --without=test development chdir={{release_dir}}"
+
+- name: migrate DB
+  command: "bundle exec rake db:migrate RAILS_ENV={{environment_name}} chdir={{release_dir}}"
+  run_once: true
+
+- name: Precompile assets
+  command: "bundle exec rake assets:precompile RAILS_ENV={{environment_name}} chdir={{release_dir}}"
+
+- name: Delete empty log folder
+  command: "rm -fr {{ release_dir }}/log"
+- name: Symlink log dir
+  file: path={{ release_dir }}/log state=link src={{ shared_dir }}/log owner=app group=app
+- name: Final symlink
+  file: path={{ current_dir }} state=link src={{ release_dir }}  owner=app group=app
+- name: Make tmp
+  file: path={{ current_dir }}/tmp state=directory owner=app group=app
+
+- template: src="sew-unique.conf" dest="/etc/init/sew-unique.conf" owner=root group=root mode=0755
+  sudo: yes
+  sudo_user: root
+- copy: src="unicorn.rb" dest="{{release_dir}}/config/unicorn.rb"
+
+- name: Restart server
+  service: name=sew-unique state=restarted
+  sudo_user: root
+
+- name: Restart nginx
+  service: name=nginx state=restarted
+  sudo_user: root
+
+- name: Count old releases
+  shell: "ls -l | grep ^d | wc -l"
+  args:
+    chdir: "{{releases_dir}}"
+  register: total
+- name: Delete oldest release if needed
+  shell: "find . -maxdepth 1 -type d ! -path . -printf '%p\n' | sort | head -n 1 | xargs rm -fr"
+  args:
+    chdir: "{{releases_dir}}"
+  when: total.stdout|int > {{releaserotation}}

@@ -1,0 +1,9 @@
+---
+environment_name: "production"
+vpc_id: "vpc-25b83140"
+subnet_id1: "subnet-36aa2c41"
+subnet_id2: ""
+web_size: "t2.micro"
+web_ami: "ami-55526765"
+web_volume_size: 30
+releaserotation: 3

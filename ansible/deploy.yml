@@ -1,0 +1,12 @@
+---
+- name: deploy web
+  hosts:
+    - tag_Name_sewunique-{{environment}}-web
+  user: ubuntu
+  sudo: True
+  sudo_user: app
+  gather_facts: True
+  vars_files:
+    - "{{environment}}_vars.yml"
+  roles:
+    - role: deploy

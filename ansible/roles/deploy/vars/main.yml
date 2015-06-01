@@ -1,0 +1,6 @@
+timestamp: "{{ansible_date_time.epoch}}"
+releases_dir: "/var/sew-unique/releases"
+release_dir: "/var/sew-unique/releases/{{timestamp}}"
+current_dir: /var/sew-unique/current
+shared_dir: /var/sew-unique/shared
+rollbar_token: 4dc7281785ff41d3bc1ed83b3e1d7c78
