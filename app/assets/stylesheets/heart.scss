@@ -4,6 +4,7 @@
   height: 25px;
   margin-right: 60px;
   top: 2px;
+  z-index: -1;
 
   @media screen and (max-width: $small) {
     margin-right: 37px;

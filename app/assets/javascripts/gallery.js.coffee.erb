@@ -17,10 +17,12 @@ gallery = {
 
 setGalleryPhoto = (index) ->
   gallery.index = parseInt(index)
-  image = "gallery-#{index}.jpg"
+
+  # Since this is dynamic we need the full URL
+  image = "https://s3-us-west-2.amazonaws.com/sewunique-production/landing/gallery-1.jpg"
 
   # Set the photo
-  $('#lightbox img').attr('src', "<%= asset_path 'gallery-1.jpg' %>")
+  $('#lightbox img').attr('src', image)
 
 launchGalleryAt = (index) ->
   setGalleryPhoto(index)
