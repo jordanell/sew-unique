@@ -3,7 +3,7 @@ require 'spec_helper'
 describe RootController do
   describe '#index' do
     it 'should render the index template' do
-      get :index, {}
+      get :index
 
       response.should render_template('index')
     end

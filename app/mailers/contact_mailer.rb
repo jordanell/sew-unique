@@ -1,5 +1,5 @@
-class ContactFormMailer < ActionMailer::Base
-  def contact_form_email(params)
+class ContactMailer < ActionMailer::Base
+  def contact_email(params)
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]

@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe ContactFormMailer do
-  describe '#contact_form_email' do
+describe ContactMailer do
+  describe '#contact_email' do
     before(:each) do
       @params = {email: 'joe@test.com', name: 'Joe Test', message: 'My message.'}
-      @mail = ContactFormMailer.contact_form_email(@params)
+      @mail = ContactMailer.contact_email(@params)
     end
 
     it 'should send the email' do

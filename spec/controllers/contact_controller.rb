@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe ContactFormController do
+describe ContactController do
   describe '#create' do
     before(:each) do
-      @params = {email: 'joe@test.com', name: 'Joe Test', message: 'My message.'}
+      @params = { email: 'joe@test.com', name: 'Joe Test', message: 'My message.' }
     end
 
     it 'should fail with no email' do

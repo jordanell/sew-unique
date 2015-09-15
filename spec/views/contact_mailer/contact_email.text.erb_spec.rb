@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'contact_form_mailer/contact_form_email.text.erb' do
+describe 'contact_mailer/contact_email.text.erb' do
 
   context 'when instance variable are present' do
     before(:each) do

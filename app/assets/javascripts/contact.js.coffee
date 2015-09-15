@@ -45,7 +45,7 @@ $(document).ready ->
     }
 
     $.ajax({
-      url: '/contact_form'
+      url: '/contact'
       type: 'post'
       data: formParams
       success: emailSuccess

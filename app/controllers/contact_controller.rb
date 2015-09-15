@@ -1,4 +1,4 @@
-class ContactFormController < ApplicationController
+class ContactController < ApplicationController
   def create
     # Make sure all params are there
     ['name', 'email', 'message'].each do |key|
@@ -8,7 +8,7 @@ class ContactFormController < ApplicationController
     end
 
     # Send it
-    ContactFormMailer.contact_form_email(params).deliver_now
+    ContactMailer.contact_email(params).deliver_now
 
     render json: {}, status: 204
   rescue Exception
