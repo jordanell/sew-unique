@@ -1,6 +1,4 @@
 class ContactFormMailer < ActionMailer::Base
-  include ApplicationHelper
-
   def contact_form_email(params)
     @name = params[:name]
     @email = params[:email]
