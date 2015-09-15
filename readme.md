@@ -5,6 +5,10 @@ This is a simple landing page website for Sew Unique.
 This site provides basic functionality for viewing photo galleries and
 getting in touch with the companies owner.
 
+## Status
+
+[![Circle CI](https://circleci.com/gh/jordanell/sew-unique/tree/master.svg?style=svg)](https://circleci.com/gh/jordanell/sew-unique/tree/master)
+
 ## Setup
 
 To run this project simply follow these steps:
