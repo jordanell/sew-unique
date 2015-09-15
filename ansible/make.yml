@@ -1,9 +1,0 @@
----
-- name: create new web instance
-  hosts: localhost
-  connection: local
-  gather_facts: False
-  vars_files:
-    - "{{environment}}_vars.yml"
-  roles:
-    - role: make
