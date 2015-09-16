@@ -15,14 +15,14 @@ class ApplicationController < ActionController::Base
                     title:        'Sew Unique',
                     type:         'website',
                     url:          'http://sewuniquebybonnie.com',
-                    image:        'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_100.png',
+                    image:        'https://s3-us-west-2.amazonaws.com/sewunique-production/landing/feature-1.jpg',
                     description:  'Keep you looking your best since 1981.'
                   },
                   twitter: {
                     card:         'summary',
                     url:          'http://sewuniquebybonnie.com',
                     title:        'Sew Unique',
-                    image:        'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_100.png',
+                    image:        'https://s3-us-west-2.amazonaws.com/sewunique-production/landing/feature-1.jpg',
                     description:  'Keep you looking your best since 1981.'
                   }
   end
