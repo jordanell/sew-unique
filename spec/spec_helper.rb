@@ -35,4 +35,10 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 
   config.infer_spec_type_from_file_location!
+
+  config.before(:each) do
+    # Stub all GA calls
+    allow_any_instance_of(Gabba::Gabba).to receive(:identify_user).and_return(true)
+    allow_any_instance_of(Gabba::Gabba).to receive(:event).and_return(true)
+  end
 end

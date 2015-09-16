@@ -1,4 +1,6 @@
 class ContactController < ApplicationController
+  include AnalyticsHelper
+
   def create
     # Make sure all params are there
     ['name', 'email', 'message'].each do |key|
@@ -9,6 +11,7 @@ class ContactController < ApplicationController
 
     # Send it
     ContactMailer.contact_email(params).deliver_now
+    send_event('Contact', 'Create')
 
     render json: {}, status: 204
   rescue Exception

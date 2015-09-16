@@ -35,6 +35,10 @@ gem 'bourbon', '4.2.2'
 gem 'neat', '1.7.2'
 gem 'font-awesome-sass', '4.3.0'
 
+# SEO
+gem 'meta-tags'
+gem 'gabba'
+
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
