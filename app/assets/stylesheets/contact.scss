@@ -12,6 +12,11 @@
 
   #email-form, #map {
     padding: 0 40px;
+
+    h4 {
+      color: $dark;
+      margin-top: 0;
+    }
   }
 
   #email-form {
@@ -56,9 +61,6 @@
     @include span-columns(6);
 
     h4 {
-      color: $dark;
-      margin-top: 0;
-
       &.second {
         margin-top: 20px;
       }
