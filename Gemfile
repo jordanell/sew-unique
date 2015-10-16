@@ -45,6 +45,9 @@ gem 'paperclip', '4.3.1'
 # For S3 storage
 gem 'aws-sdk', '< 2.0'
 
+# For the admin interface
+gem 'rails_admin', '0.7.0'
+
 group :development do
   # For documenting models
   gem 'annotate', '2.6.10'
