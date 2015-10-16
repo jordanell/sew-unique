@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20151016215822) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "galleries", force: :cascade do |t|
     t.string   "title",                      null: false
     t.string   "description"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20151016215822) do
     t.datetime "updated_at"
   end
 
-  add_index "galleries", ["public"], name: "index_galleries_on_public"
-  add_index "galleries", ["title"], name: "index_galleries_on_title"
+  add_index "galleries", ["public"], name: "index_galleries_on_public", using: :btree
+  add_index "galleries", ["title"], name: "index_galleries_on_title", using: :btree
 
   create_table "images", force: :cascade do |t|
     t.integer  "gallery_id",         null: false

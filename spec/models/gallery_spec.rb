@@ -28,8 +28,7 @@ RSpec.describe Gallery, type: :model do
   it { should respond_to(:public) }
 
   # Associations
-  it { should respond_to(:gallery) }
-  it { should respond_to(:image) }
+  it { should respond_to(:images) }
 
   # Validations
   it 'should have a title' do

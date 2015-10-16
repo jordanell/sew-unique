@@ -6,8 +6,8 @@ ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use PostgreSQL for the db
+gem 'pg', '0.15.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -43,7 +43,7 @@ gem 'gabba'
 gem 'paperclip', '4.3.1'
 
 # For S3 storage
-gem 'aws-sdk', '2.1.30'
+gem 'aws-sdk', '< 2.0'
 
 group :development do
   # For documenting models
