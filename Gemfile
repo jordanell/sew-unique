@@ -39,6 +39,17 @@ gem 'font-awesome-sass', '4.3.0'
 gem 'meta-tags'
 gem 'gabba'
 
+# For attaching files
+gem 'paperclip', '4.3.1'
+
+# For S3 storage
+gem 'aws-sdk', '2.1.30'
+
+group :development do
+  # For documenting models
+  gem 'annotate', '2.6.10'
+end
+
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -48,6 +59,9 @@ group :development, :test do
 
   # Rspec for testing
   gem 'rspec-rails', '~> 3.0.2'
+
+  # Model factories
+  gem 'factory_girl', '4.5.0'
 end
 
 group :staging, :production do

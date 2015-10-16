@@ -25,16 +25,15 @@
 @import 'variables';
 @import 'global';
 
-// Import flash styles.
-@import 'flashes';
+// Import common styles.
+@import 'common/manifest';
+
+// Import shared styles
+@import 'shared/manifest';
+
+// Import root styles
+@import 'root/manifest';
 
 // Import all other styles
-@import 'hero';
-@import 'contact-bar';
-@import 'content';
 @import 'gallery';
-@import 'about';
-@import 'contact';
-@import 'heart';
 @import 'lightbox';
-@import 'footer';

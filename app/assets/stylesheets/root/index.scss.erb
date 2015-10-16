@@ -1,0 +1,329 @@
+#hero {
+  background-image: url('https://s3-us-west-2.amazonaws.com/sewunique-production/landing/hero.jpg');
+  background-size: cover;
+  height: 600px;
+
+  #inner-hero {
+    @include outer-container;
+
+    position: relative;
+    height: 600px;
+  }
+
+  #hero-links {
+    @include shift(1);
+    @include span-columns(10);
+
+    margin-top: 10px;
+
+    ul {
+      float: right;
+      background-color: rgba(90, 90, 90, 0.1);
+      padding: 1em;
+      border-radius: 4px;
+
+      li {
+        display: inline;
+        margin: 0 5px;
+
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  #hero-content {
+    @include shift(1);
+    @include span-columns(10);
+
+    color: white;
+    position: relative;
+    top: 10%;
+
+    h3, h4, h5 {
+      -webkit-text-stroke: 1px #BBB;
+    }
+
+    h3 {
+      font-size: 50px;
+      margin-bottom: 5px;
+      font-weight: 400;
+    }
+
+    h5 {
+      font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    h4 {
+      -webkit-text-stroke: 1px #EEE;
+      font-size: 20px;
+      font-weight: 200;
+    }
+  }
+}
+
+
+#contact-bar {
+  padding: 20px 10px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: lighten($green, 10%);
+
+  span {
+    display: inline-block;
+  }
+
+  .phone {
+    margin-right: 50px;
+  }
+
+  @media screen and (max-width: $medium) {
+    font-size: 18px;
+
+    .phone {
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: 585px) {
+    .phone {
+      margin-right: 4px;
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: 18px;
+
+    .phone {
+      display: block;
+    }
+
+    .phone {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+}
+
+#content {
+  @include outer-container;
+  margin-top: 70px;
+
+  h2 {
+    font-size: 30px;
+    margin: 0 0 50px 0;
+    font-weight: 200;
+    color: $dark;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 18px;
+    color: $light;
+    text-align: center;
+    max-width: 500px;
+    margin: 30px auto 50px;
+    font-weight: 200;
+    padding: 0 20px;
+  }
+
+  .content-area {
+    @include span-columns(4);
+
+    .inner-content {
+      @include shift(1);
+      @include span-columns(10);
+
+      text-align: center;
+    }
+
+    h4 {
+      color: $dark;
+    }
+
+    p {
+      font-weight: 200;
+      color: $light;
+      line-height: 25px;
+    }
+
+    img {
+      text-align: center;
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      border: #CCCCCC 1px solid;
+      border-radius: 50%;
+    }
+
+    @media screen and (max-width: $small) {
+      @include span-columns(12);
+    }
+  }
+}
+
+
+#about {
+  @include outer-container;
+  margin-top: 150px;
+
+  .bio {
+    @include span-columns(6);
+
+    h2 {
+      font-size: 30px;
+      margin: 0 0 10px 0;
+      font-weight: 200;
+      color: $dark;
+      padding: 0 20px;
+
+      @media screen and (max-width: $small) {
+        text-align: center;
+      }
+    }
+
+    p {
+      font-weight: 200;
+      color: $light;
+      padding: 0 20px;
+      line-height: 25px;
+    }
+
+    @media screen and (max-width: $small) {
+      @include span-columns(12);
+      margin-bottom: 30px;
+    }
+  }
+
+  .photo {
+    @include span-columns(6);
+    text-align: center;
+
+    img {
+      max-width: 400px;
+      margin-top: 10px;
+      max-height: 200px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $small) {
+      @include span-columns(12);
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    margin-top: 75px;
+  }
+}
+
+#contact {
+  @include outer-container;
+  margin-top: 150px;
+
+  h2 {
+    font-size: 50px;
+    margin: 70px 0;
+    text-align: center;
+    font-weight: 200;
+    color: $dark;
+  }
+
+  #email-form, #map {
+    padding: 0 40px;
+
+    h4 {
+      color: $dark;
+      margin-top: 0;
+    }
+  }
+
+  #email-form {
+    @include span-columns(6);
+
+    #inner-form {
+      border-radius: 5px;
+      border: 1px solid #CCC;
+      padding: 20px 40px;
+
+      h4 {
+        color: dark;
+        margin-bottom: 10px;
+      }
+
+      input, textarea {
+        margin-bottom: 10px;
+        border: 1px solid #CCC;
+        border-radius: 3px;
+        font-size: 15px;
+        padding: 8px 12px;
+        color: $light;
+        width: 100%;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    @media screen and (max-width: $small) {
+      @include span-columns(12);
+      margin-bottom: 40px;
+    }
+  }
+
+  #map {
+    @include span-columns(6);
+
+    h4 {
+      &.second {
+        margin-top: 20px;
+      }
+    }
+
+    p {
+      color: $light;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 30px;
+
+      li {
+        color: $green;
+
+        i {
+          width: 10px;
+          margin-right: 20px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $small) {
+      @include span-columns(12);
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    margin-top: 75px;
+  }
+}

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'layouts/_footer.html.erb' do
+describe 'common/_footer.html.erb' do
   it 'should render' do
     render
 

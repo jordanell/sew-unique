@@ -7,6 +7,10 @@ require 'rspec/rails'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+# Load the factories
+FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
+FactoryGirl.find_definitions
+
 RSpec.configure do |config|
   # ## Mock Framework
   #
