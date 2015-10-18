@@ -15,6 +15,13 @@ class Gallery < ActiveRecord::Base
 
   validates :title, presence: true, allow_blank: false
   validates_uniqueness_of :title
+  validate :image_total
 
   scope :visible, -> { where(visible: true) }
+
+  private
+
+  def image_total
+    errors.add("Gallery has too many image") if images.size > 10
+  end
 end

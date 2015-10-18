@@ -1,5 +1,7 @@
-<div class="image-list-item">
-  <%= link_to(image.image.url, data: { lightbox: "gallery-#{image.gallery.id}" })  do %>
+<% hidden = image.position > 4 ? 'hidden' : ''%>
+
+<div class="image-list-item <%= hidden %>">
+  <%= link_to(image.image.url, data: { lightbox: "gallery-#{image.gallery.id}", title: image.title })  do %>
     <%= image_tag(image.image.url, alt: image.title) %>
   <% end %>
   <p>

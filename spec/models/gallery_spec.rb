@@ -44,6 +44,15 @@ RSpec.describe Gallery, type: :model do
     @gallery.should_not be_valid
   end
 
+  it 'should not allow more than 20 images' do
+    [0..19].each do |index|
+      FactoryGirl.create(:image, gallery: @gallery)
+    end
+    @gallery.images.build
+
+    @gallery.should_not be_valid
+  end
+
   # Scopes
   it 'should exclude private galleries' do
     @gallery2 = FactoryGirl.create(:gallery, title: 'Test', visible: false)

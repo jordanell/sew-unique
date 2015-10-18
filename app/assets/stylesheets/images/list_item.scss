@@ -1,5 +1,7 @@
 .image-list-item {
   @include span-columns(3);
+  @include omega(4);
+
   padding: 0 20px;
   text-align: center;
 
@@ -24,10 +26,13 @@
 
   @media screen and (max-width: $medium) {
     @include span-columns(6);
+    @include omega-reset(4n);
+    @include omega(2);
+
     margin-right: 0;
   }
 
   @media screen and (max-width: $small) {
-    @include span-columns(12);
+    @include fill-parent
   }
 }
