@@ -82,4 +82,10 @@ RSpec.describe Image, type: :model do
 
     @image.should_not be_valid
   end
+
+  it 'should not allow title longer than 25 characters' do
+    @image.title = 'a' * 26
+
+    @image.should_not be_valid
+  end
 end

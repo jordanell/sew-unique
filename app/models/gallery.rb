@@ -13,7 +13,7 @@
 class Gallery < ActiveRecord::Base
   has_many :images, -> { order(position: :asc) }
 
-  validates :title, presence: true, allow_blank: false
+  validates :title, presence: true, allow_blank: false, length: { maximum: 25 }
   validates_uniqueness_of :title
   validate :image_total
 

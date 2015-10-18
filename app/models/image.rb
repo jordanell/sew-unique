@@ -26,6 +26,7 @@ class Image < ActiveRecord::Base
                     bucket: S3_CONFIG['images_bucket']
 
   validates :gallery, presence: true
+  validates :title, length: { maximum: 25 }
 
   validates_attachment :image, presence: true,
     content_type: { content_type: %w(image/jpeg image/jpg image/png image/gif) },

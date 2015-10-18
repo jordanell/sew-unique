@@ -53,6 +53,12 @@ RSpec.describe Gallery, type: :model do
     @gallery.should_not be_valid
   end
 
+  it 'should not allow title longer than 25 characters' do
+    @gallery.title = 'a' * 26
+
+    @gallery.should_not be_valid
+  end
+
   # Scopes
   it 'should exclude private galleries' do
     @gallery2 = FactoryGirl.create(:gallery, title: 'Test', visible: false)

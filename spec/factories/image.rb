@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :image do
-    title { "Image #{SecureRandom.uuid}" }
+    title { "Image #{SecureRandom.uuid[0..10]}" }
     description 'Image description'
     image_file_name 'text_image.jpg'
     image_content_type 'image/jpg'
