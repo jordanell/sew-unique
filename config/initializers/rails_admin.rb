@@ -31,4 +31,11 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  # Configure simple authorization
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('Site Message') do |username, password|
+      username == 'foo' && password == 'bar'
+    end
+  end
 end
