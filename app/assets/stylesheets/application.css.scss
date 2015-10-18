@@ -31,9 +31,9 @@
 // Import shared styles
 @import 'shared/manifest';
 
-// Import root styles
+@import 'galleries/manifest';
+@import 'images/manifest';
 @import 'root/manifest';
 
 // Import all other styles
-@import 'gallery';
 @import 'lightbox';

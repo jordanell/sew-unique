@@ -1,0 +1,24 @@
+.gallery-list-item {
+  @include outer-container;
+  margin-top: 50px;
+
+  h2 {
+    font-size: 30px;
+    margin: 0 0 30px 0;
+    font-weight: 200;
+    color: $dark;
+    padding: 0 20px;
+
+    @media screen and (max-width: $medium) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: $small) {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    margin-top: 75px;
+  }
+}

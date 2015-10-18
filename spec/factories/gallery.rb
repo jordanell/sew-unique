@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :gallery do
-    title 'Test gallery title'
-    description 'Test gallery description'
+    title { "Gallery #{SecureRandom.uuid}" }
+    description 'Gallery description'
+    visible true
   end
 end

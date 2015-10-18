@@ -60,6 +60,10 @@
   </div>
 </section>
 
+<% @galleries.each do |gallery| %>
+  <%= render partial: 'galleries/list_item', locals: { gallery: gallery } %>
+<% end %>
+
 <section id="about">
   <div class="bio">
   <h2>About Me</h2>
@@ -75,8 +79,6 @@
     <%= image_tag(s3_image('landing/bonnie.jpg'), alt: 'Bonnie King') %>
   </div>
 </section>
-
-<%= render partial: 'photos/gallery' %>
 
 <section id="contact">
   <div id="email-form">
@@ -109,6 +111,3 @@
     </p>
   </div>
 </section>
-
-<%= render partial: 'photos/lightbox' %>
-

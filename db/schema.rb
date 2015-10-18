@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151016215822) do
+ActiveRecord::Schema.define(version: 20151018194848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 20151016215822) do
   create_table "galleries", force: :cascade do |t|
     t.string   "title",                      null: false
     t.string   "description"
-    t.boolean  "public",      default: true
+    t.boolean  "visible",     default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "galleries", ["public"], name: "index_galleries_on_public", using: :btree
   add_index "galleries", ["title"], name: "index_galleries_on_title", using: :btree
+  add_index "galleries", ["visible"], name: "index_galleries_on_visible", using: :btree
 
   create_table "images", force: :cascade do |t|
     t.integer  "gallery_id",         null: false

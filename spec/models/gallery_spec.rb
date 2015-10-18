@@ -5,7 +5,7 @@
 #  id          :integer          not null, primary key
 #  title       :string           not null
 #  description :string
-#  public      :boolean          default(TRUE)
+#  visible     :boolean          default(TRUE)
 #  created_at  :datetime
 #  updated_at  :datetime
 #
@@ -25,7 +25,7 @@ RSpec.describe Gallery, type: :model do
   it { should respond_to(:updated_at) }
   it { should respond_to(:title) }
   it { should respond_to(:description) }
-  it { should respond_to(:public) }
+  it { should respond_to(:visible) }
 
   # Associations
   it { should respond_to(:images) }
@@ -42,5 +42,12 @@ RSpec.describe Gallery, type: :model do
     @gallery.title = 'Test'
 
     @gallery.should_not be_valid
+  end
+
+  # Scopes
+  it 'should exclude private galleries' do
+    @gallery2 = FactoryGirl.create(:gallery, title: 'Test', visible: false)
+
+    Gallery.visible.should_not include(@gallery2)
   end
 end

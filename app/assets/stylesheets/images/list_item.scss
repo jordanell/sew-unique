@@ -1,0 +1,33 @@
+.image-list-item {
+  @include span-columns(3);
+  padding: 0 20px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+
+    @media screen and (max-width: $medium) {
+      max-width: 80%;
+    }
+
+    @media screen and (max-width: $small) {
+      max-width: 80%;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    color: $light;
+  }
+
+  @media screen and (max-width: $medium) {
+    @include span-columns(6);
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: $small) {
+    @include span-columns(12);
+  }
+}
