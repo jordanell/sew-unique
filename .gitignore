@@ -18,3 +18,5 @@
 
 # AWS configuration
 .env
+/config/s3_credentials.yml
+
