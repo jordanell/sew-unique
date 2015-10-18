@@ -1,9 +1,23 @@
 require 'spec_helper'
 
 describe 'root/index.html.erb' do
-  it 'should render' do
-    render
+  context 'when galleries are present' do
+    before(:each) do
+      @gallery = FactoryGirl.create(:gallery)
+    end
 
-    expect(rendered).to match /Your message has been successfully sent!/
+    it 'should render' do
+      assign(:galleries, [@gallery])
+
+      render
+
+      expect(rendered).to match /Sew Unique/
+    end
+  end
+
+  context 'when galleries are not present' do
+    it 'should fail to render' do
+      expect{render}.to raise_error(ActionView::Template::Error)
+    end
   end
 end

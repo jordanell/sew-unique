@@ -12,6 +12,7 @@
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  position           :integer
 #
 
 require 'spec_helper'
@@ -33,6 +34,7 @@ RSpec.describe Image, type: :model do
   it { should respond_to(:image_content_type) }
   it { should respond_to(:image_file_size) }
   it { should respond_to(:image_updated_at) }
+  it { should respond_to(:position) }
 
   # Associations
   it { should respond_to(:gallery) }

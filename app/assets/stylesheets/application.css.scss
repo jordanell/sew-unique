@@ -21,6 +21,9 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+// Import light box
+@import 'lightbox';
+
 // Import global styles
 @import 'variables';
 @import 'global';
@@ -34,6 +37,3 @@
 @import 'galleries/manifest';
 @import 'images/manifest';
 @import 'root/manifest';
-
-// Import all other styles
-@import 'lightbox';

@@ -12,9 +12,12 @@
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  position           :integer
 #
 
 class Image < ActiveRecord::Base
+  acts_as_list scope: :gallery
+
   belongs_to :gallery
 
   has_attached_file :image,

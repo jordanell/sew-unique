@@ -11,7 +11,7 @@
 #
 
 class Gallery < ActiveRecord::Base
-  has_many :images
+  has_many :images, -> { order(position: :asc) }
 
   validates :title, presence: true, allow_blank: false
   validates_uniqueness_of :title

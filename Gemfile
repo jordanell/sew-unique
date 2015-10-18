@@ -48,6 +48,12 @@ gem 'aws-sdk', '< 2.0'
 # For the admin interface
 gem 'rails_admin', '0.7.0'
 
+# For positioning images
+gem 'acts_as_list', '0.7.2'
+
+# For the light box
+gem 'lightbox2-rails', '2.7.1'
+
 group :development do
   # For documenting models
   gem 'annotate', '2.6.10'

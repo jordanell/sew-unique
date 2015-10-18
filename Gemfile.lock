@@ -36,6 +36,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_list (0.7.2)
+      activerecord (>= 3.0)
     annotate (2.6.10)
       activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
@@ -92,6 +94,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
+    lightbox2-rails (2.7.1)
+      railties (>= 3.1)
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -223,6 +227,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_list (= 0.7.2)
   annotate (= 2.6.10)
   aws-sdk (< 2.0)
   bourbon (= 4.2.2)
@@ -232,6 +237,7 @@ DEPENDENCIES
   gabba
   jbuilder (~> 2.0)
   jquery-rails
+  lightbox2-rails (= 2.7.1)
   meta-tags
   neat (= 1.7.2)
   paperclip (= 4.3.1)
