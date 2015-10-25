@@ -60,9 +60,11 @@
   </div>
 </section>
 
-<% @galleries.each do |gallery| %>
-  <%= render partial: 'galleries/list_item', locals: { gallery: gallery } %>
-<% end %>
+<section id="gallery">
+  <% @galleries.each do |gallery| %>
+    <%= render partial: 'galleries/list_item', locals: { gallery: gallery } %>
+  <% end %>
+</section>
 
 <section id="about">
   <div class="bio">
