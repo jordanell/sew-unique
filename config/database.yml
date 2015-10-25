@@ -29,7 +29,11 @@ test:
 staging:
   <<: *default
   database: sew_unique_staging
+  username: root
+  password:
 
 production:
   <<: *default
   database: sew_unique_production
+  username: root
+  password:
