@@ -1,5 +1,5 @@
 #hero {
-  background-image: url('https://s3-us-west-2.amazonaws.com/sewunique-production/landing/hero.jpg');
+  background-image: image-url('hero.jpg');
   background-size: cover;
   height: 600px;
 
@@ -113,9 +113,13 @@
   }
 }
 
+.content-section {
+  padding: 100px 0;
+  border-bottom: 1px solid #EEE;
+}
+
 #content {
   @include outer-container;
-  margin-top: 70px;
 
   h2 {
     font-size: 30px;
@@ -170,10 +174,12 @@
   }
 }
 
+#gallery {
+  @include outer-container;
+}
 
 #about {
   @include outer-container;
-  margin-top: 150px;
 
   .bio {
     @include span-columns(6);
@@ -227,7 +233,6 @@
 
 #contact {
   @include outer-container;
-  margin-top: 150px;
 
   h2 {
     font-size: 50px;
@@ -237,70 +242,40 @@
     color: $dark;
   }
 
-  #email-form, #map {
+  #map, #info {
+    @include span-columns(6);
+
     padding: 0 40px;
 
     h4 {
       color: $dark;
       margin-top: 0;
     }
-  }
-
-  #email-form {
-    @include span-columns(6);
-
-    #inner-form {
-      border-radius: 5px;
-      border: 1px solid #CCC;
-      padding: 20px 40px;
-
-      h4 {
-        color: dark;
-        margin-bottom: 10px;
-      }
-
-      input, textarea {
-        margin-bottom: 10px;
-        border: 1px solid #CCC;
-        border-radius: 3px;
-        font-size: 15px;
-        padding: 8px 12px;
-        color: $light;
-        width: 100%;
-      }
-
-      textarea {
-        resize: none;
-      }
-
-      i {
-        margin-right: 10px;
-      }
-    }
-
-    @media screen and (max-width: $small) {
-      @include span-columns(12);
-      margin-bottom: 40px;
-    }
-  }
-
-  #map {
-    @include span-columns(6);
-
-    h4 {
-      &.second {
-        margin-top: 20px;
-      }
-    }
 
     p {
       color: $light;
     }
 
+    @media screen and (max-width: $small) {
+      @include span-columns(12);
+    }
+  }
+
+  #map {
     iframe {
       width: 100%;
       height: 250px;
       border-radius: 10px;
+    }
+
+    @media screen and (max-width: $small) {
+      margin-bottom: 20px;
+    }
+  }
+
+  #info {
+    h4 {
+      margin-top: 20px;
     }
 
     ul {
@@ -316,10 +291,6 @@
           margin-bottom: 15px;
         }
       }
-    }
-
-    @media screen and (max-width: $small) {
-      @include span-columns(12);
     }
   }
 
