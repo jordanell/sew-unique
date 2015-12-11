@@ -75,7 +75,7 @@
   text-align: center;
   text-transform: uppercase;
   color: white;
-  background-color: lighten($green, 10%);
+  background-color: lighten($purple, 10%);
 
   span {
     display: inline-block;
@@ -274,8 +274,15 @@
   }
 
   #info {
+    @include omega;
+
     h4 {
       margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $green;
     }
 
     ul {
