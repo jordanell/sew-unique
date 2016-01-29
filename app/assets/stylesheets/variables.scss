@@ -6,6 +6,11 @@ $blue:  #2DB6CF;
 $green: #46b98a;
 $white: #FFFFFF;
 $purple: #5A4DA0;
+$purple-light: lighten($purple, 50%);
+
+// Borders
+$default-border: 1px solid $dark;
+$default-border-radius: 10px;
 
 // Screen sizes
 $small: 550px;

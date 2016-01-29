@@ -16,5 +16,13 @@ describe RootController do
 
       expect(assigns(:galleries)).to eq([@gallery1])
     end
+
+    it 'should set the alerts instance variable' do
+      @alert = FactoryGirl.create(:alert)
+
+      get :index
+
+      expect(assigns(:alerts)).to eq([@alert])
+    end
   end
 end

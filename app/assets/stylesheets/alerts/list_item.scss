@@ -1,0 +1,12 @@
+.alert-list-item {
+  @include outer-container;
+
+  p {
+    padding: 1.5em 0.25em;
+    margin: 0.5em 1em;
+    background-color: $purple-light;
+    border: $default-border;
+    border-radius: $default-border-radius;
+    text-align: center;
+  }
+}

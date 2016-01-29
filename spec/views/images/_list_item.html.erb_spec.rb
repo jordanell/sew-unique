@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe 'galleries/_list_item.html.erb' do
+describe 'images/_list_item.html.erb' do
   before(:each) do
-    @gallery = FactoryGirl.create(:gallery)
+    @image = FactoryGirl.create(:image)
   end
 
   it 'should render' do
-    render partial: 'galleries/list_item', locals: { gallery: @gallery }
+    render partial: 'images/list_item', locals: { image: @image }
 
-    expect(rendered).to match(@gallery.title)
+    expect(rendered).to match(@image.title)
   end
 end
