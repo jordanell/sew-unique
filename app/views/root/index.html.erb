@@ -106,5 +106,8 @@
     <p>
       Evening and weekend appointments available upon request.
     </p>
+    <% @alerts.each do |alert| %>
+      <%= render partial: 'alerts/list_item', locals: { alert: alert } %>
+    <% end %>
   </div>
 </section>
